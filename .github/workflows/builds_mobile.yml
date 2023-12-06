@@ -82,7 +82,7 @@ jobs:
       - name: Build application
         run: |
              qmake ${{env.QMAKE_PROJECT}} CONFIG+=release DEFINES+=QT_CONNECTIVITY_PATCHED
-             make -j$(nproc)
+             make -j$(nproc) apk
       - uses: actions/upload-artifact@v3
         with:
           name: build-dir
